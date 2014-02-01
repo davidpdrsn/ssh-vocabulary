@@ -1,0 +1,134 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Spinnaker', sans-serif;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  padding-top: .5rem;
+  height: 10rem;
+  background-image: url(0825104415_25.jpg);
+  background-position: center center;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+h3 {
+  font-size: 300%;
+  color: #777;
+  padding-top: 1rem;
+}
+
+button.de, input.de {
+  float: left;
+}
+
+button.kr, input.kr {
+  float: right;
+}
+
+.word-input {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.submit {
+  width: 100px;
+  height: 2rem;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: 1rem;
+  position: relative;
+  font-size: 17px;
+  border: none;
+  background-color: #777;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  cursor: pointer;
+}
+
+button.de, button.kr {
+  width: 100px;
+  height: 2rem;
+  margin: 2rem;
+  font-size: 15px;
+  border: none;
+  background-color: #777;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  cursor: pointer;
+  outline: none;
+}
+
+input, button {
+  outline: none;
+  border-radius: .25rem;
+}
+
+input.de, input.kr {
+  border: 1px solid #bbb;
+  color: #777;
+  font-size: 13px;
+  padding: .25rem;
+  width: 145px;
+}
+
+ul {
+  margin: 3rem 0 0;
+  padding: 0;
+  width: 100%;
+}
+
+.voc-list li {
+  list-style: none;
+  padding: .5rem 1rem;
+}
+
+.voc-list li:nth-child(even) {
+  background-color: rgb(223,223,223);
+}
+
+.voc-list li:nth-child(odd) {
+  background-color: rgb(230,230,230);
+}
+
+.up {
+  text-align: center;
+  margin: .5rem;
+}
+
+.up a {
+  color: #777;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+a:hover {
+  color: #a77;
+}
+
+.voc-list li {
+  overflow: hidden;
+}
+
+.korean-word,
+.german-word {
+  width: 50%;
+  float: left;
+  text-align: center;
+  transition: .2s;
+}
+
+.hide {
+  opacity: 0;
+}
