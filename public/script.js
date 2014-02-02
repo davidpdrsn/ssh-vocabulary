@@ -57,18 +57,20 @@ $(function() {
   $(document).on('dblclick', 'ul.voc-list li', function() {
     var id = $(this).data('id');
 
-    $.ajax({
-      url: '/words/'+id+'.json',
-      type: 'POST',
-      data: {'_method':'DELETE'}
-    }).done(function() {
-      $('[data-id='+id+']').slideUp(function() {
-        $(this).remove();
+    if (confirm("Sure you wanna delete that word?")) {
+      $.ajax({
+        url: '/words/'+id+'.json',
+        type: 'POST',
+        data: {'_method':'DELETE'}
+      }).done(function() {
+        $('[data-id='+id+']').slideUp(function() {
+          $(this).remove();
+        });
+      }).fail(function(d) {
+        console.log(d);
+        alert('Failed to delete the word');
       });
-    }).fail(function(d) {
-      console.log(d);
-      alert('Failed to delete the word');
-    });
+    }
   });
 
   $('button.de').on('click', function() {
